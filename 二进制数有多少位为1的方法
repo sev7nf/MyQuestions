@@ -1,0 +1,5 @@
+详见解答：
+    http://exercise.acmcoder.com/online/online_judge_ques?ques_id=1667&konwledgeId=134
+    
+使用方法：
+  (n > 0)&&(n &= n-1);   //这可以将最低位之后的都变0
