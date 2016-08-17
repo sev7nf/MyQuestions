@@ -1,0 +1,46 @@
+详见解答：
+    http://exercise.acmcoder.com/online/online_judge_ques?ques_id=1667&konwledgeId=134
+    
+    import java.util.*;
+    public class Main {
+	public static void main(String[] args) {
+		Scanner in=new Scanner(System.in);
+		while(in.hasNext()){
+			int l=in.nextInt();
+			int r=in.nextInt();
+			int m=in.nextInt();
+			System.out.println(Main.test(l, r, m));
+		}
+		
+		
+	}
+	public static int BitCount2( int n)
+	{
+	     int c =0 ;
+	    for (c =0; n!=0; ++c)
+	    {
+	        n &= (n -1) ; // 清除最低位的1
+	    }
+	    return c ;
+	}
+	public static int test(int l,int r,int m){
+		int count=0;
+		for(int i=l;i<=r;i++){
+			if(BitCount2(i)==m){
+				count++;
+			}
+		}
+		if(count>0){
+			return count;
+		}else{
+			return -1;
+		}
+	}
+
+}
+    
+使用方法：
+  (n > 0)&&(n &= n-1);   //这可以将最低位之后的都变0
+
+判断数是否是二进制的方幂
+http://blog.csdn.net/wconvey/article/details/44705639
